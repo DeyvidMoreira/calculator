@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="height_display">250dp</dimen>
+    <dimen name="margin_display">15dp</dimen>
+    <dimen name="display_result_size">125dp</dimen>
+
+    <dimen name="paddin_display_mod">5dp</dimen>
+    <dimen name="margin_display_result">10dp</dimen>
+
+    <dimen name="stroke_shape">1dp</dimen>
+    <dimen name="radius_shape_display">15dp</dimen>
+
+    <dimen name="text_result_size">60sp</dimen>
+    
+    <dimen name="default_dimen">0dp</dimen>
+
+
+
+
+
+
+</resources>

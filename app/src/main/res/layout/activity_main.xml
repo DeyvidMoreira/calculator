@@ -4,16 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/midle_black">
 
-    <TextView
-        android:id="@+id/tv_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_menu"
+        android:layout_width="@dimen/default_dimen"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/custom_toolbar_shape"
+        app:titleTextColor="@color/grey"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_display"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_display"
+        android:layout_margin="@dimen/margin_display"
+        android:background="@drawable/custom_shape_display"
+        app:layout_constraintTop_toBottomOf="@id/tb_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_mod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_display">
+            <TextView
+                android:id="@+id/tv_mod_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:padding="@dimen/paddin_display_mod"
+                android:background="@drawable/custom_indice_shape"
+                android:textColor="@color/midle_black"/>
+            <TextView
+                android:id="@+id/tv_mod_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:padding="@dimen/paddin_display_mod"
+                android:background="@drawable/custom_indice_shape"
+                android:textColor="@color/midle_black"/>
+            <TextView
+                android:id="@+id/tv_mod_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:padding="@dimen/paddin_display_mod"
+                android:background="@drawable/custom_indice_shape"
+                android:textColor="@color/midle_black"/>
+            <TextView
+                android:id="@+id/tv_mod_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:padding="@dimen/paddin_display_mod"
+                android:background="@drawable/custom_indice_shape"
+                android:textColor="@color/midle_black"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_below="@id/ll_mod"
+            android:layout_width="@dimen/default_dimen"
+            android:layout_height="@dimen/display_result_size"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/margin_display_result"
+            android:gravity="right"
+            android:text="555"
+            android:textSize="@dimen/text_result_size"
+            android:textColor="@color/midle_black"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_memory_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/tv_result"
+            android:layout_margin="@dimen/margin_display"/>
+
+    </RelativeLayout>
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
