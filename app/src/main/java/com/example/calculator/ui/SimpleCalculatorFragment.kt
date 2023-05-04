@@ -37,31 +37,6 @@ class SimpleCalculatorFragment : Fragment(), View.OnClickListener {
         return root
     }
 
-
-    private fun setListeners() {
-
-        binding.btnZero.setOnClickListener(this)
-        binding.btnOne.setOnClickListener(this)
-        binding.btnTwo.setOnClickListener(this)
-        binding.btnThree.setOnClickListener(this)
-        binding.btnFour.setOnClickListener(this)
-        binding.btnFive.setOnClickListener(this)
-        binding.btnSix.setOnClickListener(this)
-        binding.btnSeven.setOnClickListener(this)
-        binding.btnHeight.setOnClickListener(this)
-        binding.btnNine.setOnClickListener(this)
-        binding.btnDot.setOnClickListener(this)
-        //Operator
-        binding.btnAdd.setOnClickListener(this)
-        binding.btnDecrease.setOnClickListener(this)
-        binding.btnMultiply.setOnClickListener(this)
-        binding.btnDivide.setOnClickListener(this)
-        binding.btnPercentage.setOnClickListener(this)
-        binding.btnAc.setOnClickListener(this)
-        binding.btnBackSpace.setOnClickListener(this)
-        binding.btnEqual.setOnClickListener(this)
-    }
-
     override fun onClick(v: View) {
 
         when (v.id) {
@@ -91,6 +66,31 @@ class SimpleCalculatorFragment : Fragment(), View.OnClickListener {
                 binding.tvExpression.text = binding.tvResult.text.toString().drop(1)
             }
         }
+    }
+
+
+    private fun setListeners() {
+
+        binding.btnZero.setOnClickListener(this)
+        binding.btnOne.setOnClickListener(this)
+        binding.btnTwo.setOnClickListener(this)
+        binding.btnThree.setOnClickListener(this)
+        binding.btnFour.setOnClickListener(this)
+        binding.btnFive.setOnClickListener(this)
+        binding.btnSix.setOnClickListener(this)
+        binding.btnSeven.setOnClickListener(this)
+        binding.btnHeight.setOnClickListener(this)
+        binding.btnNine.setOnClickListener(this)
+        binding.btnDot.setOnClickListener(this)
+        //Operator
+        binding.btnAdd.setOnClickListener(this)
+        binding.btnDecrease.setOnClickListener(this)
+        binding.btnMultiply.setOnClickListener(this)
+        binding.btnDivide.setOnClickListener(this)
+        binding.btnPercentage.setOnClickListener(this)
+        binding.btnAc.setOnClickListener(this)
+        binding.btnBackSpace.setOnClickListener(this)
+        binding.btnEqual.setOnClickListener(this)
     }
 
     private fun onDigit(v: View) {
