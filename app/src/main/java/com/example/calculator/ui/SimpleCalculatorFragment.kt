@@ -41,79 +41,26 @@ class SimpleCalculatorFragment : Fragment(), View.OnClickListener {
 
         when (v.id) {
             //Numbers
-            R.id.btn_zero -> {
-                onDigit(binding.btnZero)
-            }
-
-            R.id.btn_one -> {
-                onDigit(binding.btnOne)
-            }
-
-            R.id.btn_two -> {
-                onDigit(binding.btnTwo)
-            }
-
-            R.id.btn_three -> {
-                onDigit(binding.btnThree)
-            }
-
-            R.id.btn_four -> {
-                onDigit(binding.btnFour)
-            }
-
-            R.id.btn_five -> {
-                onDigit(binding.btnFive)
-            }
-
-            R.id.btn_six -> {
-                onDigit(binding.btnSix)
-            }
-
-            R.id.btn_seven -> {
-                onDigit(binding.btnSeven)
-            }
-
-            R.id.btn_height -> {
-                onDigit(binding.btnHeight)
-            }
-
-            R.id.btn_nine -> {
-                onDigit(binding.btnNine)
-            }
-
-            R.id.btn_dot -> {
-                onDigit(binding.btnDot)
-            }
+            R.id.btn_zero -> { onDigit(binding.btnZero) }
+            R.id.btn_one -> { onDigit(binding.btnOne) }
+            R.id.btn_two -> { onDigit(binding.btnTwo) }
+            R.id.btn_three -> { onDigit(binding.btnThree) }
+            R.id.btn_four -> { onDigit(binding.btnFour) }
+            R.id.btn_five -> { onDigit(binding.btnFive) }
+            R.id.btn_six -> { onDigit(binding.btnSix) }
+            R.id.btn_seven -> { onDigit(binding.btnSeven) }
+            R.id.btn_height -> { onDigit(binding.btnHeight) }
+            R.id.btn_nine -> { onDigit(binding.btnNine) }
+            R.id.btn_dot -> { onDigit(binding.btnDot) }
 
             //Operators
-            R.id.btn_add -> {
-                onOperator(binding.btnAdd)
-            }
-
-            R.id.btn_decrease -> {
-                onOperator(binding.btnDecrease)
-            }
-
-            R.id.btn_multiply -> {
-                onOperator(binding.btnMultiply)
-            }
-
-            R.id.btn_divide -> {
-                onOperator(binding.btnDivide)
-            }
-
-            R.id.btn_percentage -> {
-                onOperator(binding.btnPercentage)
-            }
-
-            R.id.btn_ac -> {
-                onClear()
-            }
-
-            R.id.btn_back_space -> {
-                onBackSpace()
-            }
-
+            R.id.btn_add -> { onOperator(binding.btnAdd) }
+            R.id.btn_decrease -> { onOperator(binding.btnDecrease) }
+            R.id.btn_multiply -> { onOperator(binding.btnMultiply) }
+            R.id.btn_divide -> { onOperator(binding.btnDivide) }
+            R.id.btn_percentage -> { onOperator(binding.btnPercentage) }
+            R.id.btn_ac -> { onClear() }
+            R.id.btn_back_space -> { onBackSpace() }
             R.id.btn_equal -> {
                 onEqual()
                 binding.tvExpression.text = binding.tvResult.text.toString().drop(1)
