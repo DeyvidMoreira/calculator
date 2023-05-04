@@ -16,5 +16,23 @@
 
     <style name="Theme.Calculator.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="operation_button" parent="comum_button">
+
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="background">@color/blue</item>
+        <item name="android:textColor">@color/light_black</item>
+
+    </style>
+
+    <style name="comum_button" parent="Widget.MaterialComponents.ExtendedFloatingActionButton">
+
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="background">@color/white</item>
+
+
+    </style>
+
 
 </resources>

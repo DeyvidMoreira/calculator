@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_simple_calculator">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.calculator.ui.home.SimpleCalculatorFragment"
-        android:label="@string/menu_home"
+        android:id="@+id/nav_simple_calculator"
+        android:name="com.example.calculator.ui.SimpleCalculatorFragment"
+        android:label="@string/menu_simple_calculator"
         tools:layout="@layout/fragment_simple_calculator" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.calculator.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_scientific_calculator"
+        android:name="com.example.calculator.ui.ScientificCalculatorFragment"
+        android:label="@string/menu_scientific_calculator"
+        tools:layout="@layout/fragment_scientific_calculator" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.calculator.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_measurement_converter"
+        android:name="com.example.calculator.ui.MeasurementConverterFragment"
+        android:label="@string/menu_measurement_converter"
+        tools:layout="@layout/fragment_measurement_converter" />
 </navigation>

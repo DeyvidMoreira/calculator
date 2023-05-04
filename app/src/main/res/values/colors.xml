@@ -7,11 +7,18 @@
     <color name="light_grey">#FAFAFA</color>
 
     <color name="black">#000000</color>
-    <color name="midle_black">#191919</color>
+    <color name="midle_black">#111111</color>
+    <color name="midle_light_black">#191919</color>
     <color name="light_black">#424242</color>
+
+    <color name="text_button_number">#FFFFFF</color>
 
     <color name="blue">#0D47A1</color>
     <color name="midle_blue">#1565C0</color>
     <color name="light_blue">#1E88E5</color>
+
+    <color name="red">#CF0505</color>
+
+
 
 </resources>
