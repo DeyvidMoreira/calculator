@@ -52,7 +52,4 @@ dependencies {
     //lib
     implementation 'net.objecthunter:exp4j:0.4.8'
 
-    //lib - Apache Commons Math
-    implementation 'org.apache.commons:commons-math3:3.6.1'
-
 }

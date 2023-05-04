@@ -14,7 +14,7 @@
 
     <string name="button_ac">AC</string>
     <string name="button_percentage">%</string>
-    <string name="button_divide">÷</string>
+    <string name="button_divide">\u00F7</string>
     <string name="button_multiply">x</string>
     <string name="button_decrease">-</string>
     <string name="button_add">+</string>
@@ -31,5 +31,10 @@
     <string name="button_zero">0</string>
     <string name="button_dot">.</string>
     <string name="button_double_zero">00</string>
+
+    <string name="error">Error</string>
+    <string name="evaluate_error">Evaluate Error</string>
+    <string name="error_arithmetic">Error Arithmetic</string>
+
 
 </resources>

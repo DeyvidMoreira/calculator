@@ -41,33 +41,85 @@ class SimpleCalculatorFragment : Fragment(), View.OnClickListener {
 
         when (v.id) {
             //Numbers
-            R.id.btn_zero -> { onDigit(binding.btnZero) }
-            R.id.btn_one -> { onDigit(binding.btnOne) }
-            R.id.btn_two -> { onDigit(binding.btnTwo) }
-            R.id.btn_three -> { onDigit(binding.btnThree) }
-            R.id.btn_four -> { onDigit(binding.btnFour) }
-            R.id.btn_five -> { onDigit(binding.btnFive) }
-            R.id.btn_six -> { onDigit(binding.btnSix) }
-            R.id.btn_seven -> { onDigit(binding.btnSeven) }
-            R.id.btn_height -> { onDigit(binding.btnHeight) }
-            R.id.btn_nine -> { onDigit(binding.btnNine) }
-            R.id.btn_dot -> { onDigit(binding.btnDot) }
+            R.id.btn_zero -> {
+                onDigit(binding.btnZero)
+            }
+
+            R.id.btn_one -> {
+                onDigit(binding.btnOne)
+            }
+
+            R.id.btn_two -> {
+                onDigit(binding.btnTwo)
+            }
+
+            R.id.btn_three -> {
+                onDigit(binding.btnThree)
+            }
+
+            R.id.btn_four -> {
+                onDigit(binding.btnFour)
+            }
+
+            R.id.btn_five -> {
+                onDigit(binding.btnFive)
+            }
+
+            R.id.btn_six -> {
+                onDigit(binding.btnSix)
+            }
+
+            R.id.btn_seven -> {
+                onDigit(binding.btnSeven)
+            }
+
+            R.id.btn_height -> {
+                onDigit(binding.btnHeight)
+            }
+
+            R.id.btn_nine -> {
+                onDigit(binding.btnNine)
+            }
+
+            R.id.btn_dot -> {
+                onDigit(binding.btnDot)
+            }
 
             //Operators
-            R.id.btn_add -> { onOperator(binding.btnAdd) }
-            R.id.btn_decrease -> { onOperator(binding.btnDecrease) }
-            R.id.btn_multiply -> { onOperator(binding.btnMultiply) }
-            R.id.btn_divide -> { onOperator(binding.btnDivide) }
-            R.id.btn_percentage -> { onOperator(binding.btnPercentage) }
-            R.id.btn_ac -> { onClear() }
-            R.id.btn_back_space -> { onBackSpace() }
+            R.id.btn_add -> {
+                onOperator(binding.btnAdd)
+            }
+
+            R.id.btn_decrease -> {
+                onOperator(binding.btnDecrease)
+            }
+
+            R.id.btn_multiply -> {
+                onOperator(binding.btnMultiply)
+            }
+
+            R.id.btn_divide -> {
+                onOperator(binding.btnDivide)
+            }
+
+            R.id.btn_percentage -> {
+                onOperator(binding.btnPercentage)
+            }
+
+            R.id.btn_ac -> {
+                onClear()
+            }
+
+            R.id.btn_back_space -> {
+                onBackSpace()
+            }
+
             R.id.btn_equal -> {
                 onEqual()
                 binding.tvExpression.text = binding.tvResult.text.toString().drop(1)
             }
         }
     }
-
 
     private fun setListeners() {
 
@@ -92,6 +144,7 @@ class SimpleCalculatorFragment : Fragment(), View.OnClickListener {
         binding.btnBackSpace.setOnClickListener(this)
         binding.btnEqual.setOnClickListener(this)
     }
+
 
     private fun onDigit(v: View) {
 
@@ -149,36 +202,36 @@ class SimpleCalculatorFragment : Fragment(), View.OnClickListener {
             val txt = binding.tvExpression.text.toString()
 
             if (txt.isNotBlank()) {
-                expression = ExpressionBuilder(txt).build()
-
-                try {
-                    val result = expression.evaluate()
-                    val longResult = result.toLong()
-                    binding.tvResult.visibility = View.VISIBLE
-
-                    if (result == longResult.toDouble()) {
-                        binding.tvResult.text = longResult.toString()
-                    } else {
-                        binding.tvResult.text = result.toString()
-                    }
-
-                } catch (e: ArithmeticException) {
-                    Log.e("evaluate error", "Error Arithmetic")
-                    binding.tvResult.text = "Error"
+                if (txt.contains("/0")) {
+                    binding.tvResult.text = getString(R.string.error)
                     stateError = true
                     lastNumeric = false
-                }
+                } else {
+                    val modifiedInput = txt.replace("÷", "/")
+                    expression = ExpressionBuilder(modifiedInput).build()
 
+                    try {
+                        val result = expression.evaluate()
+                        val longResult = result.toLong()
+                        binding.tvResult.visibility = View.VISIBLE
+
+                        if (result == longResult.toDouble()) {
+                            binding.tvResult.text = longResult.toString()
+                        } else {
+                            binding.tvResult.text = result.toString()
+                        }
+                    } catch (e: ArithmeticException) {
+                        Log.e( getString(R.string.evaluate_error),
+                            getString(R.string.error_arithmetic))
+                        binding.tvResult.text =  getString(R.string.error)
+                        stateError = true
+                        lastNumeric = false
+                    }
+                }
             } else {
                 binding.tvResult.text = "0"
             }
-
         }
-
-
     }
 
-
 }
-
-

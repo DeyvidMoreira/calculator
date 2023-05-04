@@ -18,6 +18,7 @@
 
     <dimen name="button_font_size">30sp</dimen>
     <dimen name="button_equal_size">50sp</dimen>
+    <dimen name="button_percent_size">40sp</dimen>
 
 
 
