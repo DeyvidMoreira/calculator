@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/midle_light_black"
     android:padding="@dimen/paddin_display"
-    tools:context=".ui.SimpleCalculatorFragment">
+    tools:context=".view.SimpleCalculatorFragment">
 
     <RelativeLayout
         android:id="@+id/rl_display"
@@ -17,7 +17,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_historic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_expression"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_display"
+            android:layout_marginTop="@dimen/margin_display"
+            android:layout_marginEnd="@dimen/margin_display"/>
         <TextView
             android:id="@+id/tv_expression"
             android:layout_width="@dimen/default_dimen"
@@ -30,7 +39,7 @@
             android:layout_marginEnd="@dimen/margin_display"
             android:gravity="right"
             android:textColor="@color/midle_black"
-            android:textSize="@dimen/text_result_size"
+            android:textSize="@dimen/text_expression_size"
             tools:text="555" />
 
         <TextView

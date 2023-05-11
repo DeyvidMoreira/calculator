@@ -1,4 +1,4 @@
-package com.example.calculator.ui
+package com.example.calculator.view
 
 import android.os.Bundle
 import android.view.LayoutInflater

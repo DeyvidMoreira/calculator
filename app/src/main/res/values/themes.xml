@@ -34,5 +34,9 @@
 
     </style>
 
+    <style name="menu_style" parent="Theme.AppCompat.Light">
+        <item name="android:windowBackground">@color/light_black</item>
+    </style>
+
 
 </resources>

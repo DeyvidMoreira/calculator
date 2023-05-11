@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_simple_calculator"
-        android:name="com.example.calculator.ui.SimpleCalculatorFragment"
-        android:label="@string/menu_simple_calculator"
+        android:name="com.example.calculator.view.SimpleCalculatorFragment"
+        android:label=""
         tools:layout="@layout/fragment_simple_calculator" />
 
     <fragment
         android:id="@+id/nav_scientific_calculator"
-        android:name="com.example.calculator.ui.ScientificCalculatorFragment"
-        android:label="@string/menu_scientific_calculator"
+        android:name="com.example.calculator.view.ScientificCalculatorFragment"
+        android:label=""
         tools:layout="@layout/fragment_scientific_calculator" />
 
     <fragment
         android:id="@+id/nav_measurement_converter"
-        android:name="com.example.calculator.ui.MeasurementConverterFragment"
-        android:label="@string/menu_measurement_converter"
+        android:name="com.example.calculator.view.MeasurementConverterFragment"
+        android:label=""
         tools:layout="@layout/fragment_measurement_converter" />
 </navigation>

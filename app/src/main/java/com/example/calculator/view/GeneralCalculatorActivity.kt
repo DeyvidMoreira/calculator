@@ -1,8 +1,8 @@
-package com.example.calculator.ui
+package com.example.calculator.view
 
 import android.os.Bundle
-import android.view.Menu
-import com.google.android.material.snackbar.Snackbar
+import android.widget.ImageView
+import android.widget.Toast
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -19,6 +19,7 @@ class GeneralCalculatorActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityGeneralCalculatorBinding
 
+    private lateinit var btnHistoric: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -35,17 +36,21 @@ class GeneralCalculatorActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_simple_calculator, R.id.nav_scientific_calculator, R.id.nav_measurement_converter
+                R.id.nav_simple_calculator,
+                R.id.nav_scientific_calculator,
+                R.id.nav_measurement_converter
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        historic()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.general_calculator, menu)
-        return true
+    fun historic() {
+        btnHistoric = findViewById(R.id.btn_histotic)
+        btnHistoric.setOnClickListener {
+            Toast.makeText(applicationContext, "histórico", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
