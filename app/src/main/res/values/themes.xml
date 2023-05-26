@@ -37,6 +37,9 @@
     <style name="menu_style" parent="Theme.AppCompat.Light">
         <item name="android:windowBackground">@color/light_black</item>
     </style>
+    <style name="card_style" parent="Theme.AppCompat.Light">
+        <item name="android:windowBackground">@drawable/custom_shape_display</item>
+    </style>
 
 
 </resources>

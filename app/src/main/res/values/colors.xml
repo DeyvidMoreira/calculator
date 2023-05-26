@@ -7,17 +7,26 @@
     <color name="light_grey">#FAFAFA</color>
 
     <color name="black">#000000</color>
+    <color name="trans_black97">#C9000000</color>
+    <color name="trans_black95">#30000000</color>
     <color name="midle_black">#111111</color>
     <color name="midle_light_black">#191919</color>
     <color name="light_black">#424242</color>
 
-    <color name="text_button_number">#FFFFFF</color>
+    <color name="text_button_number">#A2B5C3</color>
 
     <color name="blue">#0D47A1</color>
     <color name="midle_blue">#1565C0</color>
     <color name="light_blue">#1E88E5</color>
+    <color name="trans_dark_blue97">#F70B1222</color>
+    <color name="trans_dark_blue95">#F00B1222</color>
+
+    <color name="purple">#7A40CA</color>
+    <color name="dark_purple">#4B0AA4</color>
 
     <color name="red">#CF0505</color>
+    <color name="dark_red">#7E0808</color>
+    <color name="orange">#FD5723</color>
 
 
 

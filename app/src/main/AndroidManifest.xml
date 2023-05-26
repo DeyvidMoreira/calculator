@@ -13,20 +13,15 @@
         android:theme="@style/Theme.Calculator"
         tools:targetApi="31">
         <activity
-            android:name=".view.GeneralCalculatorActivity"
+            android:name=".view.MainActivity"
             android:exported="true"
-            android:label="@string/title_activity_general_calculator"
+            android:label="@string/title_activity_calculator"
             android:theme="@style/Theme.Calculator.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".view.MainActivity"
-            android:exported="true">
-
         </activity>
     </application>
 

@@ -1,14 +1,10 @@
 package com.example.calculator.service.constants
 
-class CalculatorConstants private constructor(){
+class CalculatorConstants private constructor() {
 
-    object VERSION {
-        const val VERSION_DATABASE = 5
+    object DATABASE {
+        const val VERSION_DATABASE = 7
+        const val TABLE_NAME = "historic"
+        const val ID = "historic_item_id"
     }
-
-    object TABLE {
-        const val TABLE_NAME = "table-of-historic"
-    }
-
-
 }

@@ -52,21 +52,16 @@ dependencies {
 
     //lib calculos
     implementation 'net.objecthunter:exp4j:0.4.8'
+    implementation 'org.apache.commons:commons-math3:3.6.1'
 
-    //room
-    def room_version = "2.5.0"
-    def lifecycle_version =  "2.5.1"
-    def ActivityVersion =  ' 1.6.1 '
+    //ROOM
+    implementation 'androidx.room:room-runtime:2.5.1'
+    implementation 'androidx.room:room-ktx:2.5.1'
+    kapt 'androidx.room:room-compiler:2.5.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1'
 
-    implementation("androidx.room:room-runtime:$room_version")
-    annotationProcessor "androidx.room:room-compiler:$room_version"
-    implementation "androidx.room:room-ktx:$room_version"
-
-    kapt("androidx.room:room-compiler:$room_version")
-
-    //lifecyclerScope
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
-    implementation "androidx.activity:activity-ktx:$ActivityVersion"
+    //Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
 
 
 }

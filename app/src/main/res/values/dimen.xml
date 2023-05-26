@@ -18,7 +18,7 @@
 
     <dimen name="default_dimen">0dp</dimen>
 
-    <dimen name="button_font_size">30sp</dimen>
+    <dimen name="button_font_size">26sp</dimen>
     <dimen name="button_equal_size">50sp</dimen>
     <dimen name="button_percent_size">40sp</dimen>
 
